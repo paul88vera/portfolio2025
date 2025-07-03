@@ -1,0 +1,8 @@
+-- DROP DATABASE
+DROP DATABASE IF EXISTS portfolio_db;
+
+-- CREATE DATABASE
+CREATE DATABASE portfolio_db;
+
+-- USE DATABASE
+USE portfolio_db;
