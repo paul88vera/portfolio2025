@@ -18,7 +18,7 @@ export default function RootLayout() {
         onMouseLeave={() => {
           setSocial(false);
         }}
-        className="absolute bg-slate-950 p-2 z-20 bottom-0 right-10 md:right-20 text-white border-2 border-white flex flex-row gap-6 ease-in-out delay-300">
+        className="fixed bg-slate-950 p-2 z-20 bottom-0 right-10 md:right-20 text-white border-2 border-white flex flex-row gap-6 ease-in-out delay-300">
         <div>© 2025 by Paul Vera</div>
         {social & (window.innerWidth > 768) ? (
           <div>

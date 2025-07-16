@@ -4,7 +4,9 @@ import { baseApi } from "./base";
 // @desc    Fetch All Projects
 // @access  Public
 export function getProjects(options) {
-  return baseApi.get("/projects", options).then((res) => res.data);
+  return baseApi
+    .get("/projects", options)
+    .then((res) => (Array.isArray(res.data) ? res.data : [res.data]));
 }
 
 // @route   GET /projects/:id
