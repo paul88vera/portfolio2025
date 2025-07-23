@@ -19,7 +19,7 @@ export default function Home() {
         <div className="text-white clear z-40">
           <div className="relative flex flex-col gap-0">
             <span className="text-5xl md:text-8xl flex flex-row flex-nowrap m-auto">
-              <p className="load-ani">I'm a</p>
+              <p className="load-ani ease-in-out">I'm a</p>
 
               <Nav />
             </span>
