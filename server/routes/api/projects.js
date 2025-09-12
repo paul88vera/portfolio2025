@@ -40,7 +40,7 @@ router.post("/", (req, res) => {
       console.error(err);
       res.status(500).send("Server error on Project insert");
     } else {
-      res.status(201).send(`Project ${name} Added`);
+      res.status(201).send(`Project Added`);
     }
   });
 });
@@ -51,12 +51,12 @@ router.put("/:id", (req, res) => {
   const { name, desc, git, link, type, good } = req.body;
   const query =
     "UPDATE Project SET ProjectName = ?, ProjectDesc = ?, ProjectGit = ?, ProjectLink = ?, ProjectType = ?, ProjectGood = ? WHERE ProjectID = ?";
-  db.query(query, [name, desc, git, link, type, good], (err, results) => {
+  db.query(query, [name, desc, git, link, type, good, id], (err, results) => {
     if (err) {
       console.error(err);
       res.status(500).send("Server error on Project insert");
     } else {
-      res.status(201).send(`Project ${name} Updated`);
+      res.status(201).send(`Project Updated`);
     }
   });
 });

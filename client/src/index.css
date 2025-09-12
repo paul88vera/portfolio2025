@@ -1,10 +1,14 @@
 @import "tailwindcss";
 
+body {
+  background-color: var(--color-slate-900);
+}
+
 /* --------------
 ---- Animations
 -----------------*/
 .load-ani {
-  animation: all 3s ease-in-out;
+  animation: all 2.1s ease-in-out;
 }
 
 @keyframes fade-up {
@@ -23,7 +27,7 @@
 }
 
 .load-ani-zoomIn {
-  animation: zoom-in 5s ease-in-out;
+  animation: zoom-in 2s ease-in-out;
 }
 
 @keyframes zoom-in {
@@ -36,7 +40,7 @@
 }
 
 .load-ani-pop {
-  animation: icon-pop 2s ease-in;
+  animation: icon-pop 0.5s ease-in-out;
 }
 
 @keyframes icon-pop {
@@ -58,7 +62,7 @@
   position: fixed;
   top: 0;
   animation: fadeOut 2s ease-in-out;
-  z-index: 99;
+  z-index: 999999;
 }
 
 @keyframes fadeOut {
@@ -114,4 +118,14 @@
   bottom: -20px;
   right: 40%;
   clip-path: ellipse();
+}
+
+.bg-img-container {
+  background-color: var(--color-slate-950);
+  background-image: url("../src/assets/pexels-googledeepmind-17485706.webp");
+  background-blend-mode: soft-light;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
